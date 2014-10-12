@@ -1,0 +1,10 @@
+# **GLOBAL** configuraton files for settings which apply to
+# all sunra components
+studio_id: 99
+studio_name: TEST_NAME
+api_key: aabbccdd
+project_rest_api_url: http://localhost:3000
+recording_formats: mp4, mp3
+recording_service_rest_api_url: http://localhost/recording_service
+
+local_store: /var/www/SOWHAT
