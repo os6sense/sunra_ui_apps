@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'copier_dialog.ui'
 #
-# Created: Thu Jul 31 18:49:23 2014
+# Created: Mon Oct 13 20:09:15 2014
 #      by: PyQt4 UI code generator 4.10.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -141,7 +141,7 @@ class Ui_Dialog(object):
         self.newerButton.setPalette(palette)
         self.newerButton.setStyleSheet(_fromUtf8(""))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("../../../lib/images/go-previous.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8("../../lib/images/go-previous.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.newerButton.setIcon(icon)
         self.newerButton.setIconSize(QtCore.QSize(32, 32))
         self.newerButton.setObjectName(_fromUtf8("newerButton"))
@@ -210,7 +210,7 @@ class Ui_Dialog(object):
         self.olderButton.setLayoutDirection(QtCore.Qt.RightToLeft)
         self.olderButton.setStyleSheet(_fromUtf8(""))
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(_fromUtf8("../../../lib/images/go-next.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(_fromUtf8("../../lib/images/go-next.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.olderButton.setIcon(icon1)
         self.olderButton.setIconSize(QtCore.QSize(32, 32))
         self.olderButton.setObjectName(_fromUtf8("olderButton"))
@@ -368,7 +368,7 @@ class Ui_Dialog(object):
         self.cancelButton.setFont(font)
         self.cancelButton.setStyleSheet(_fromUtf8(""))
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(_fromUtf8("../../../lib/images/window-close.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(_fromUtf8("../../lib/images/window-close.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.cancelButton.setIcon(icon2)
         self.cancelButton.setIconSize(QtCore.QSize(32, 32))
         self.cancelButton.setObjectName(_fromUtf8("cancelButton"))
@@ -443,7 +443,7 @@ class Ui_Dialog(object):
         self.copyButton.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.copyButton.setStyleSheet(_fromUtf8(""))
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(_fromUtf8("../../../lib/images/media-flash-sd-mmc.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(_fromUtf8("../../lib/images/media-flash-sd-mmc.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.copyButton.setIcon(icon3)
         self.copyButton.setIconSize(QtCore.QSize(32, 32))
         self.copyButton.setFlat(False)
@@ -519,7 +519,7 @@ class Ui_Dialog(object):
         self.uploadButton.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.uploadButton.setStyleSheet(_fromUtf8(""))
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(_fromUtf8("../../../lib/images/network-wireless.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(_fromUtf8("../../lib/images/network-wireless.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.uploadButton.setIcon(icon4)
         self.uploadButton.setIconSize(QtCore.QSize(32, 32))
         self.uploadButton.setFlat(False)

@@ -363,7 +363,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../lib/images/go-previous.png</normaloff>../../../lib/images/go-previous.png</iconset>
+          <normaloff>../../lib/images/go-previous.png</normaloff>../../lib/images/go-previous.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -586,7 +586,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../lib/images/go-next.png</normaloff>../../../lib/images/go-next.png</iconset>
+          <normaloff>../../lib/images/go-next.png</normaloff>../../lib/images/go-next.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -1084,7 +1084,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../lib/images/window-close.png</normaloff>../../../lib/images/window-close.png</iconset>
+          <normaloff>../../lib/images/window-close.png</normaloff>../../lib/images/window-close.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -1317,7 +1317,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../lib/images/media-flash-sd-mmc.png</normaloff>../../../lib/images/media-flash-sd-mmc.png</iconset>
+          <normaloff>../../lib/images/media-flash-sd-mmc.png</normaloff>../../lib/images/media-flash-sd-mmc.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -1556,7 +1556,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../lib/images/network-wireless.png</normaloff>../../../lib/images/network-wireless.png</iconset>
+          <normaloff>../../lib/images/network-wireless.png</normaloff>../../lib/images/network-wireless.png</iconset>
         </property>
         <property name="iconSize">
          <size>

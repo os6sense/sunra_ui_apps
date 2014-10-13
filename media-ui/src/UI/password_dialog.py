@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'password_dialog.ui'
 #
-# Created: Thu Jul 31 18:49:23 2014
+# Created: Mon Oct 13 20:09:15 2014
 #      by: PyQt4 UI code generator 4.10.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -52,7 +52,7 @@ class Ui_Dialog(object):
         self.okButton.setFont(font)
         self.okButton.setStyleSheet(_fromUtf8("color: white"))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("../../../../lib/images/mail-mark-notjunk.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8("../../../lib/images/mail-mark-notjunk.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.okButton.setIcon(icon)
         self.okButton.setIconSize(QtCore.QSize(32, 32))
         self.okButton.setObjectName(_fromUtf8("okButton"))
@@ -63,7 +63,7 @@ class Ui_Dialog(object):
         self.cancelButton.setFont(font)
         self.cancelButton.setStyleSheet(_fromUtf8("color: white"))
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(_fromUtf8("../../../../lib/images/window-close.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(_fromUtf8("../../../lib/images/window-close.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.cancelButton.setIcon(icon1)
         self.cancelButton.setIconSize(QtCore.QSize(32, 32))
         self.cancelButton.setObjectName(_fromUtf8("cancelButton"))
