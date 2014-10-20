@@ -9,8 +9,9 @@ import sys
 from PyQt4.QtGui import QApplication
 from PyQt4.QtCore import SIGNAL
 
-from sunra.config import Global
+from sunra.config import Global, Uploader
 from sunra.recording_db_proxy import RecordingDBProxy
+from uploader_service_proxy import UploaderServiceProxy
 
 from password_dialog.PasswordController import PasswordController
 from media_dialog.MediaController import MediaController
@@ -24,6 +25,8 @@ class SunraMediaUI(object):
         self.qt_app = QApplication(sys.argv)
 
         self.rdb_proxy = RecordingDBProxy(Global())
+
+        self.uploader_proxy = UploaderServiceProxy(Uploader())
 
         self.media_controller = MediaController(self.rdb_proxy, Global())
 
@@ -101,7 +104,7 @@ class SunraMediaUI(object):
         if immediate:
             # call the manual_upload method on the local recording service
             # to begin the upload immediately
-            pass
+            self.uploader_proxy.manual_start()
 
         self.media_controller.confirm_upload_marking(immediate)
 
