@@ -29,6 +29,7 @@ class Uploader(object):
         conf_file = open(fn)
         config = yaml.safe_load(conf_file)
 
+        self.uploader_service_url = config['uploader_service_url']
         self.archive_server_address = config['archive_server_address']
         self.archive_server_port = config['archive_server_port']
         self.sftp_ssl_key = config['sftp_ssl_key']
