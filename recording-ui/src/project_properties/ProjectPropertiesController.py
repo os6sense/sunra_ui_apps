@@ -83,20 +83,28 @@ class ProjectPropertiesController(QObject):
         Determines which dialog to show depending on whether there is either
         a booking in progress, or if there is a later booking.
         """
-        self.projects = self.rdb_proxy.get_todays_bookings()
+        try:
+            self.projects = self.rdb_proxy.get_todays_bookings()
+        except Exception, e:
+            self.projects = {'exception': True, 'error': str(e)}
 
-        if len(self.projects) > 0 \
-                and self.projects[0].has_key('error'): # Check for an error field
+        print type(self.projects)
+        print self.projects
 
-            self.pp_list_view.showErrors(_("Error Obtaining Booking Details"),
-                 "Exiting because the system could not connect to REST API"
-                 "- check the API key in /etc/sunra/config.yml.\n\n"
-                 "The actual error message was: \n%s" % self.projects['error'])
-            exit(100)
+        if len(self.projects) > 0:
+            # Check for an error field
+            if ((type(self.projects) is dict and self.projects.has_key('error')) or \
+                (type(self.projects) is list and self.projects[0].has_key('error'))):
 
-        if len(self.projects) > 0: # there are existing bookings, show them
-                              # and allow the user to choose whether
-                              # to use a current or future booking
+                print "DEBUG: projects = %s" % self.projects
+                self.pp_list_view.showErrors(_("Error Obtaining Booking Details"),
+                     ["Exiting because the system could not connect to REST API" +
+                     "- check the API key in /etc/sunra/config.yml.\n\n" +
+                     "The actual error message was: \n\n%s" % self.projects['error']])
+                exit(100)
+
+            # there are existing bookings, show them and allow the user to
+            # choose whether to use a current or future booking
             form = self.pp_list_view
             form.add_projects(self.projects)
         else:
