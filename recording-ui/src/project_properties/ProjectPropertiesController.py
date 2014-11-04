@@ -88,15 +88,12 @@ class ProjectPropertiesController(QObject):
         except Exception, e:
             self.projects = {'exception': True, 'error': str(e)}
 
-        print type(self.projects)
-        print self.projects
-
         if len(self.projects) > 0:
             # Check for an error field
             if ((type(self.projects) is dict and self.projects.has_key('error')) or \
                 (type(self.projects) is list and self.projects[0].has_key('error'))):
 
-                print "DEBUG: projects = %s" % self.projects
+                # print "DEBUG: projects = %s" % self.projects
                 self.pp_list_view.showErrors(_("Error Obtaining Booking Details"),
                      ["Exiting because the system could not connect to REST API" +
                      "- check the API key in /etc/sunra/config.yml.\n\n" +

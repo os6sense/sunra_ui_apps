@@ -17,13 +17,9 @@ from FIFOController import FifoController
 
 class MPVWidget(QWidget):
     """
-    Wrapper around MPlayer in slave mode to allow us to play video on any
+    Wrapper around MPV in slave mode to allow us to play video on any
     QT Component.
     """
-    CMD = "/usr/local/bin/mpv --slave-broken --really-quiet "\
-            "--no-input-default-bindings --fs --wid %(WID)s "\
-            "%(FILENAME)s"
-
     CFG = dict(AO="alsa", VO="xv")
 
     def __init__(self, parent=None):
@@ -38,7 +34,6 @@ class MPVWidget(QWidget):
         self.playback_controller = FifoController()
 
         self.CFG["FIFO"] = self.playback_controller.fifo_filename()
-
         self.CFG["FILENAME"] = "http://localhost:8090/livehq.flv"
 
     def stop(self):
@@ -78,7 +73,7 @@ class MPVWidget(QWidget):
         # will remain with MPV rather than mplayer hence the delay is disabled
         # for testing.
         # time.sleep(1)
-        self.process = MPVRunner.execute(self.CMD % self.CFG)
+        self.process = MPVRunner.execute(self.CFG)
 
         atexit.register(self.exit)
 
@@ -106,8 +101,11 @@ class MPVWidget(QWidget):
             self.process.kill()
 
         self.playback_controller.close_fifo()
+
         # Nuclear option since the above does not work it seems
-        subprocess.call("killall -9 mpv", shell=True)
+        # subprocess.call("killall -9 mpv", shell=True)
+        MPVRunner.STOP = True
+        MPVRunner.nuke()
 
         self.close()
 

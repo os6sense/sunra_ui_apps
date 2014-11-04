@@ -224,7 +224,6 @@ class ProjectPropertiesModel(object):
 
     def extend_booking(self, proxy, value):
         self.end_time = proxy.extend_booking(self.uuid, self.booking_id, value)
-        print self.end_time
 
     def update(self, proxy):
         """
