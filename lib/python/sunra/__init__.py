@@ -1,4 +1,4 @@
-__all__ = ['config', 'presenters', 'recording_proxy']
+__all__ = ['config', 'presenters', 'recording_db_proxy']
 import config
 import presenters
-import recording_proxy
+import recording_db_proxy
