@@ -93,13 +93,19 @@ class ProjectPropertiesController(QObject):
             if ((type(self.projects) is dict and self.projects.has_key('error')) or \
                 (type(self.projects) is list and self.projects[0].has_key('error'))):
 
-                # print "DEBUG: projects = %s" % self.projects
-                self.pp_list_view.showErrors(_("Error Obtaining Booking Details"),
-                     ["Exiting because the system could not connect to REST API" +
-                     "- check the API key in /etc/sunra/config.yml.\n\n" +
-                     "The actual error message was: \n\n%s" % self.projects['error']])
+                error = "Exiting because the system could not connect to REST API" \
+                     "- check the API key in /etc/sunra/config.yml.\n\n" \
+                     "The actual error message was: \n\n%s" % self.projects['error']
+
+                print error
+                #self.pp_list_view.showErrors(_("Error Obtaining Booking Details"),
+                     #["Exiting because the system could not connect to REST API" +
+                     #"- check the API key in /etc/sunra/config.yml.\n\n" +
+                     #"The actual error message was: \n\n%s" % self.projects['error']])
+
                 exit(100)
 
+            print "show F"
             # there are existing bookings, show them and allow the user to
             # choose whether to use a current or future booking
             form = self.pp_list_view

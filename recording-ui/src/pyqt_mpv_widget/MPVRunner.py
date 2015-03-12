@@ -52,8 +52,11 @@ class MPVRunner(object):
             found = False
 
             for proc in psutil.process_iter():
-                if proc.name() == MPVRunner.PROCNAME:
-                    found = True
+                try: # edge case, proc may no longer exist when we check name
+                    if proc.name() == MPVRunner.PROCNAME:
+                        found = True
+                except:
+                    pass
 
             if not found:
                 if MPVRunner.LASTCONFIG != '':
