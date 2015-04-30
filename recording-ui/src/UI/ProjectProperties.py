@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'ProjectProperties.ui'
 #
-# Created: Wed Jul  2 15:38:43 2014
-#      by: PyQt4 UI code generator 4.10.3
+# Created: Tue Apr 14 16:20:33 2015
+#      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -228,9 +228,9 @@ class Ui_ProjectProperties(object):
 
     def retranslateUi(self, ProjectProperties):
         ProjectProperties.setWindowTitle(_translate("ProjectProperties", "Enter Booking/Project Details Please.", None))
-        self.label_2.setText(_translate("ProjectProperties", "CLIENT NAME:", None))
-        self.label.setText(_translate("ProjectProperties", "PROJECT TITLE:", None))
-        self.label_4.setText(_translate("ProjectProperties", "<html><head/><body><p align=\"justify\">Please enter the name of the client company and the name of the project, in the boxes above. This information should be available from the booking form for the session.</p><p align=\"justify\">Please also enter the start and end time for the project. This can be approximate but please ensure the end time is the *latest* time for which a project might end.</p><p align=\"justify\">Please click the &quot;OK&quot; button below when you have entered this information</p></body></html>", None))
+        self.label_2.setText(_translate("ProjectProperties", "CLIENT:", None))
+        self.label.setText(_translate("ProjectProperties", "PROJECT:", None))
+        self.label_4.setText(_translate("ProjectProperties", "<html><head/><body><p align=\"justify\">CLIENT and PROJECT information should be available from the paper copy of the booking form.</p><p align=\"justify\">Enter a START and END TIME for the booking. This can be approximate but should cover the entire booking. please ensure the end time is the *latest* time for which a project might end.</p><p align=\"justify\">Please click the &quot;OK&quot; button below when you have entered this information</p></body></html>", None))
         self.label_3.setText(_translate("ProjectProperties", "STUDIO:", None))
         self.studio_name_label.setText(_translate("ProjectProperties", "MONK", None))
         self.label_6.setText(_translate("ProjectProperties", "START TIME:", None))

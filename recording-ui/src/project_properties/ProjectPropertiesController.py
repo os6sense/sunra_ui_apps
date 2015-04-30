@@ -186,8 +186,8 @@ class ProjectPropertiesController(QObject):
         question_text = _(
                 "You are about to create a project with the details:\n\n" \
 
-                "Project Name  : %s\n" \
-                "Client Name   : %s\n\n" \
+                "Client Name  : %s\n" \
+                "Project Name   : %s\n\n" \
 
                 "Start Time    : %s\n" \
                 "End Time      : %s\n\n" \

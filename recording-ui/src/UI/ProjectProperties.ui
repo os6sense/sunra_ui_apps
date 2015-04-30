@@ -235,7 +235,7 @@ color: white;</string>
      </font>
     </property>
     <property name="text">
-     <string>CLIENT NAME:</string>
+     <string>CLIENT:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -255,7 +255,7 @@ color: white;</string>
      </font>
     </property>
     <property name="text">
-     <string>PROJECT TITLE:</string>
+     <string>PROJECT:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -283,7 +283,7 @@ color: white;</string>
      <string notr="true">color: white;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;Please enter the name of the client company and the name of the project, in the boxes above. This information should be available from the booking form for the session.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;Please also enter the start and end time for the project. This can be approximate but please ensure the end time is the *latest* time for which a project might end.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;Please click the &amp;quot;OK&amp;quot; button below when you have entered this information&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;CLIENT and PROJECT information should be available from the paper copy of the booking form.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;Enter a START and END TIME for the booking. This can be approximate but should cover the entire booking. please ensure the end time is the *latest* time for which a project might end.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;Please click the &amp;quot;OK&amp;quot; button below when you have entered this information&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="wordWrap">
      <bool>true</bool>

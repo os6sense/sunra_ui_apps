@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'AutoStopDialog.ui'
 #
-# Created: Wed Jul  2 15:38:43 2014
-#      by: PyQt4 UI code generator 4.10.3
+# Created: Tue Apr 14 16:20:34 2015
+#      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -116,7 +116,7 @@ class Ui_AutoStopDialog(object):
         self.line_2.setFrameShadow(QtGui.QFrame.Sunken)
         self.line_2.setObjectName(_fromUtf8("line_2"))
         self.label_2 = QtGui.QLabel(self.groupBox)
-        self.label_2.setGeometry(QtCore.QRect(300, 100, 121, 31))
+        self.label_2.setGeometry(QtCore.QRect(320, 100, 121, 31))
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.radioButton_3 = QtGui.QRadioButton(self.groupBox)
         self.radioButton_3.setGeometry(QtCore.QRect(420, 188, 51, 22))
@@ -141,7 +141,7 @@ class Ui_AutoStopDialog(object):
         self.label_4.setStyleSheet(_fromUtf8("color: white"))
         self.label_4.setObjectName(_fromUtf8("label_4"))
         self.countdown_label = QtGui.QLabel(self.groupBox)
-        self.countdown_label.setGeometry(QtCore.QRect(150, 90, 141, 51))
+        self.countdown_label.setGeometry(QtCore.QRect(150, 90, 161, 51))
         font = QtGui.QFont()
         font.setPointSize(40)
         font.setBold(True)

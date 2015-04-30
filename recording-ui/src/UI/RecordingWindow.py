@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'RecordingWindow.ui'
 #
-# Created: Wed Jul  2 15:38:43 2014
-#      by: PyQt4 UI code generator 4.10.3
+# Created: Tue Apr 14 16:20:34 2015
+#      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
 
