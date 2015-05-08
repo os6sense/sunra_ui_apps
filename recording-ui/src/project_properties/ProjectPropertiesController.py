@@ -105,7 +105,6 @@ class ProjectPropertiesController(QObject):
 
                 exit(100)
 
-            print "show F"
             # there are existing bookings, show them and allow the user to
             # choose whether to use a current or future booking
             form = self.pp_list_view

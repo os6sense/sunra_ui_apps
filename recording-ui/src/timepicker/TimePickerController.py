@@ -87,6 +87,7 @@ class TimePickerController(QObject):
 
     def close(self):
         self.view.hide()
+        self.emit(SIGNAL("CANCEL"))
 
     def close_with_signal(self, signal, value = None):
         """

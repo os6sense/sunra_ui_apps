@@ -53,9 +53,11 @@ class ProjectPropertiesFormView(QDialog, Ui_ProjectProperties, CenterDialog, Sha
         self.end_time_picker.connect(self.end_time_picker,
                 SIGNAL("SET_TIME"), self.on_end_time_changed)
 
-        #self.end_time.timeChanged.connect(self.on_end_time_changed)
-        #self.start_time.timeChanged.connect(self.on_start_time_changed)
+        self.start_time_picker.connect(self.start_time_picker,
+                SIGNAL("CANCEL"), self.on_time_cancelled)
 
+        self.end_time_picker.connect(self.end_time_picker,
+                SIGNAL("CANCEL"), self.on_time_cancelled)
 
     # projectName
     def _pn_get(self):
@@ -113,9 +115,17 @@ class ProjectPropertiesFormView(QDialog, Ui_ProjectProperties, CenterDialog, Sha
 
     def on_set_start_time_clicked(self):
         self.start_time_picker.show()
+        self.cancelButton.hide()
+        self.create_project_button.hide()
+
+    def on_time_cancelled(self):
+        self.cancelButton.show()
+        self.create_project_button.show()
 
     def on_set_end_time_clicked(self):
         self.end_time_picker.show()
+        self.cancelButton.hide()
+        self.create_project_button.hide()
 
     @pyqtSignature("")
     def on_create_project_button_clicked(self):
@@ -139,7 +149,6 @@ class ProjectPropertiesFormView(QDialog, Ui_ProjectProperties, CenterDialog, Sha
             self.startTime = QTime(py_time.hour, py_time.minute)
 
     def on_end_time_changed(self, time):
-        print time
         py_time = parse(time)
         if py_time < self.startTime:
             self.end_time.setTime(self.start_time.time())
