@@ -283,7 +283,7 @@ color: white;</string>
      <string notr="true">color: white;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;CLIENT and PROJECT information should be available from the paper copy of the booking form.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;Enter a START and END TIME for the booking. This can be approximate but should cover the entire booking. please ensure the end time is the *latest* time for which a project might end.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;Please click the &amp;quot;OK&amp;quot; button below when you have entered this information&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;CLIENT and PROJECT information should be available from the paper copy of the booking form.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;Press the SET buttons to provide a START and END TIME for the booking. This can be approximate but should cover the entire booking. Please ensure the end time is the &lt;span style=&quot; font-weight:600;&quot;&gt;latest&lt;/span&gt; time at which a project might end.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;Please click the &amp;quot;OK&amp;quot; button below when you have entered this information&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="wordWrap">
      <bool>true</bool>
@@ -327,27 +327,36 @@ color: white;</string>
      <rect>
       <x>190</x>
       <y>130</y>
-      <width>118</width>
+      <width>81</width>
       <height>27</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background: white;
 color: black;</string>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
+    </property>
+    <property name="specialValueText">
+     <string/>
     </property>
    </widget>
    <widget class="QTimeEdit" name="end_time">
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>470</x>
       <y>130</y>
-      <width>118</width>
+      <width>81</width>
       <height>27</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background: white;
 color: black;</string>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::NoButtons</enum>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
@@ -408,7 +417,7 @@ color: black;</string>
      <rect>
       <x>380</x>
       <y>135</y>
-      <width>101</width>
+      <width>91</width>
       <height>17</height>
      </rect>
     </property>
@@ -506,6 +515,32 @@ color: black;</string>
 color: black;</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="set_start_time">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>130</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SET</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="set_end_time">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>130</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SET</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QPushButton" name="create_project_button">
    <property name="enabled">
@@ -520,7 +555,7 @@ color: black;</string>
     </rect>
    </property>
    <property name="text">
-    <string>Create Project</string>
+    <string>CREATE PROJECT</string>
    </property>
    <property name="icon">
     <iconset>
@@ -543,7 +578,7 @@ color: black;</string>
     </rect>
    </property>
    <property name="text">
-    <string>Cancel</string>
+    <string>CANCEL</string>
    </property>
    <property name="icon">
     <iconset>

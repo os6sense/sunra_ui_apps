@@ -1,4 +1,8 @@
 from dateutil.parser import parse
+
+# LJ 05/05/15 - added in, seems it was missing causing QTimePresenter to fail.
+from datetime import datetime
+
 from PyQt4.QtCore import QTime
 
 class DatePresenter(str):

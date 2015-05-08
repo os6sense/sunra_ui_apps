@@ -27,13 +27,13 @@ class AutoStopController(QObject):
         super(AutoStopController, self).__init__(parent)
         self.model = model
 
-        # Status is the information we have about the recoring state
-        # it should be updated externally.
-        self.status = None
-
         self.view = view
         if self.view == None:
             self.view = AutoStopDialog(parent)
+
+        # Status is the information we have about the recoring state
+        # it should be updated externally.
+        self.status = None
 
         self.timer = None
         if parent != None:

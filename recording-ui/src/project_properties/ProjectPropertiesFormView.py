@@ -22,6 +22,10 @@ from UI.SharedMessageDialog import SharedMessageDialog
 
 from sunra.presenters import QTimePresenter, TimePresenter
 
+
+
+from timepicker.TimePickerController import TimePickerController
+
 from i18n.translate import _
 
 ###############################################################################
@@ -41,9 +45,17 @@ class ProjectPropertiesFormView(QDialog, Ui_ProjectProperties, CenterDialog, Sha
 
         self.leClientName.setFocus()
 
-        # self.start_time.timeChanged.connect(self.on_start_time_changed)
-        self.end_time.timeChanged.connect(self.on_end_time_changed)
-        self.start_time.timeChanged.connect(self.on_start_time_changed)
+        self.start_time_picker = TimePickerController(None, parent=self)
+        self.start_time_picker.connect(self.start_time_picker,
+                SIGNAL("SET_TIME"), self.on_start_time_changed)
+
+        self.end_time_picker = TimePickerController(None, parent=self)
+        self.end_time_picker.connect(self.end_time_picker,
+                SIGNAL("SET_TIME"), self.on_end_time_changed)
+
+        #self.end_time.timeChanged.connect(self.on_end_time_changed)
+        #self.start_time.timeChanged.connect(self.on_start_time_changed)
+
 
     # projectName
     def _pn_get(self):
@@ -90,7 +102,6 @@ class ProjectPropertiesFormView(QDialog, Ui_ProjectProperties, CenterDialog, Sha
         """
         super(ProjectPropertiesFormView, self).show()
 
-
     def update_view(self, model):
         """
         Update the view based upon the supplied model.
@@ -99,6 +110,12 @@ class ProjectPropertiesFormView(QDialog, Ui_ProjectProperties, CenterDialog, Sha
         self.client_name = model.client_name
         self.startTime = model.start_time
         self.endTime = model.end_time
+
+    def on_set_start_time_clicked(self):
+        self.start_time_picker.show()
+
+    def on_set_end_time_clicked(self):
+        self.end_time_picker.show()
 
     @pyqtSignature("")
     def on_create_project_button_clicked(self):
@@ -115,9 +132,17 @@ class ProjectPropertiesFormView(QDialog, Ui_ProjectProperties, CenterDialog, Sha
         self.emit(SIGNAL("Cancelled"))
 
     def on_start_time_changed(self, time):
-        if time > self.end_time.time():
+        py_time = parse(time)
+        if py_time > self.endTime:
             self.start_time.setTime(self.end_time.time())
+        else:
+            self.startTime = QTime(py_time.hour, py_time.minute)
 
     def on_end_time_changed(self, time):
-        if time < self.start_time.time():
+        print time
+        py_time = parse(time)
+        if py_time < self.startTime:
             self.end_time.setTime(self.start_time.time())
+        else:
+            self.endTime = QTime(py_time.hour, py_time.minute)
+

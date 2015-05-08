@@ -166,10 +166,12 @@ class RecordingDBProxy(object):
                 'end_time': TimePresenter(booking_detail.end_time, False)
              }
         }
+        print data
         url = "%s/projects/%s/bookings.json" % (self.resource_url, uuid)
 
         r = self._post(url, data)
 
+        print r
         if len(r.json()) == 1:
             # some sort of error occurred
             return r.json()

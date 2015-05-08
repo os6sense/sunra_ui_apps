@@ -202,11 +202,14 @@ class ProjectPropertiesModel(object):
         Create a new booking using the proxy, passing self to the proxy
         and setting booking_id to the value returned.
         """
+
         # There will be the odd occassion when the start time of a group
         # overlaps with the end time of another. Usually this will be along
         # the lines of a one booking finishing at 5:00pm and another starting
         # directly after. In order to avoid times overlapping we add 1
-        # second to the start time. THIS IS DONE IN THE RAILS BOOKING
+        # second to the start time. 
+
+        # NOTE THAT THIS IS DONE IN THE RAILS SIDE OF CREATING A BOOKING
 
         booking = proxy.create_booking(self.uuid, self)
 
